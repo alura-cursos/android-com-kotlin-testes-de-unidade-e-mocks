@@ -36,8 +36,10 @@ class FormularioCadastroUsuarioActivity : AppCompatActivity() {
     private fun cadastra(usuario: Usuario) {
         lifecycleScope.launch {
             try {
-                UsuarioRepository(dao).salva(usuario)
-                finish()
+                if (usuario.ehValido()) {
+                    UsuarioRepository(dao).salva(usuario)
+                    finish()
+                }
             } catch (e: Exception) {
                 Log.e("CadastroUsuario", "configuraBotaoCadastrar: ", e)
                 toast("Falha ao cadastrar usuário")
