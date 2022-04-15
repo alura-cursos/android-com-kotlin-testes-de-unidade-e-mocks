@@ -35,4 +35,24 @@ class TestaProduto {
         //Assert - Afirme
         Assert.assertEquals(false, valorEhValido)
     }
+
+    @Test
+    fun quandoOValorForMenorOuIgualAZeroValorEhValidoDeveSerFalso() {
+        val produtoComValorIgualAZero = Produto(
+            nome = "Lichia",
+            descricao = "Doce",
+            valor = BigDecimal("0")
+        )
+        val produtoComValorMenorQueZero = Produto(
+            nome = "Uva",
+            descricao = "Thompson",
+            valor = BigDecimal("-10.99")
+        )
+
+        val valorIgualAZeroEhValido = produtoComValorIgualAZero.valorEhValido
+        val valorMenorQueZeroEhValido = produtoComValorMenorQueZero.valorEhValido
+
+        Assert.assertEquals(false, valorIgualAZeroEhValido)
+        Assert.assertEquals(false, valorMenorQueZeroEhValido)
+    }
 }
