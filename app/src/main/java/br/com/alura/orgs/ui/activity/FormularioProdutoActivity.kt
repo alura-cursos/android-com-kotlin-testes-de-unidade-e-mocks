@@ -89,7 +89,7 @@ class FormularioProdutoActivity : UsuarioBaseActivity() {
             lifecycleScope.launch {
                 usuario.value?.let { usuario ->
                     val produtoNovo = criaProduto(usuario.id)
-                    if (produtoNovo.valorEhValido()) {
+                    if (produtoNovo.valorEhValido) {
                         ProdutoRepository(produtoDao).salva(produtoNovo)
                         finish()
                     }
