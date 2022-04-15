@@ -1,7 +1,7 @@
 package br.com.alura.orgs
 
 import br.com.alura.orgs.model.Produto
-import org.junit.Assert
+import org.junit.Assert.*
 import org.junit.Test
 import java.math.BigDecimal
 
@@ -17,7 +17,7 @@ class TestaProduto {
 
         val valorEhValido = produtoValido.valorEhValido
 
-        Assert.assertEquals(true, valorEhValido)
+        assertTrue(valorEhValido)
     }
 
     @Test
@@ -33,7 +33,7 @@ class TestaProduto {
         val valorEhValido = produtoInvalido.valorEhValido
 
         //Assert - Afirme
-        Assert.assertEquals(false, valorEhValido)
+        assertFalse(valorEhValido)
     }
 
     @Test
@@ -52,7 +52,7 @@ class TestaProduto {
         val valorIgualAZeroEhValido = produtoComValorIgualAZero.valorEhValido
         val valorMenorQueZeroEhValido = produtoComValorMenorQueZero.valorEhValido
 
-        Assert.assertEquals(false, valorIgualAZeroEhValido)
-        Assert.assertEquals(false, valorMenorQueZeroEhValido)
+        assertFalse(valorIgualAZeroEhValido)
+        assertFalse(valorMenorQueZeroEhValido)
     }
 }
