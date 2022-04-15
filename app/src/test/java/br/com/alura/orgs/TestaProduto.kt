@@ -19,4 +19,20 @@ class TestaProduto {
 
         Assert.assertEquals(true, valorEhValido)
     }
+
+    @Test
+    fun seOValorForMaiorQueCemReaisDeveDarErro() {
+        //Arrange - Arrumar
+        val produtoInvalido = Produto(
+            nome = "Carambola",
+            descricao = "Amarela",
+            valor = BigDecimal("105.99")
+        )
+
+        //Act - Agir
+        val valorEhValido = produtoInvalido.valorEhValido
+
+        //Assert - Afirme
+        Assert.assertEquals(false, valorEhValido)
+    }
 }
