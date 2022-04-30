@@ -8,7 +8,7 @@ import java.math.BigDecimal
 class ProdutoTests {
 
     @Test
-    fun deveRetornarVerdadeiroQuandoOValorForValido() {
+    fun `deve retornar verdadeiro quando o valor for valido`() {
         val produtoValido = Produto(
             nome = "Banana",
             descricao = "Banana prata",
@@ -21,7 +21,7 @@ class ProdutoTests {
     }
 
     @Test
-    fun deveRetornarFalsoQuandoOValorForMaiorQueCem() {
+    fun `deve retornar falso quando o valor for maior que cem`() {
         //Arrange - Arrumar
         val produtoInvalido = Produto(
             nome = "Carambola",
@@ -37,7 +37,7 @@ class ProdutoTests {
     }
 
     @Test
-    fun deveRetornarFalsoQuandoOValorForMenorOuIgualAZero() {
+    fun `deve retornar falso quando o valor for menor ou igual a zero`() {
         val produtoComValorIgualAZero = Produto(
             nome = "Lichia",
             descricao = "Doce",
