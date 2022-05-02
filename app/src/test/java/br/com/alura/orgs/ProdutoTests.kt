@@ -1,6 +1,7 @@
 package br.com.alura.orgs
 
 import br.com.alura.orgs.model.Produto
+import org.amshove.kluent.shouldBeEqualTo
 import org.junit.Assert.*
 import org.junit.Test
 import java.math.BigDecimal
@@ -17,6 +18,7 @@ class ProdutoTests {
 
         val valorEhValido = produtoValido.valorEhValido
 
+        valorEhValido shouldBeEqualTo true
         assertTrue(valorEhValido)
     }
 
