@@ -6,7 +6,7 @@ import br.com.alura.orgs.model.Produto
 class ProdutoRepository(
     private val dao: ProdutoDao
 ) {
-    fun salva(produto: Produto) = dao.salva(produto)
+    suspend fun salva(produto: Produto) = dao.salva(produto)
 
     suspend fun remove(produto: Produto) = dao.remove(produto)
 
