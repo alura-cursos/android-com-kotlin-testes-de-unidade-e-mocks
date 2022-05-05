@@ -6,6 +6,7 @@ import br.com.alura.orgs.database.dao.ProdutoDao
 import br.com.alura.orgs.extensions.toast
 import br.com.alura.orgs.model.Produto
 import io.mockk.InternalPlatformDsl.toArray
+import io.mockk.every
 import io.mockk.mockk
 import io.mockk.verify
 import org.junit.Test
@@ -25,6 +26,10 @@ class ProdutoRepositoryTests {
             descricao = "Banana prata",
             valor = BigDecimal("6.99")
         )
+
+        every {
+            dao.salva(produto)
+        }.returns(Unit)
         //Act
         produtoRepository.salva(produto)
 
