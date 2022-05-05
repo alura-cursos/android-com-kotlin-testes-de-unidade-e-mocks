@@ -14,7 +14,7 @@ interface ProdutoDao {
     fun buscaTodosDoUsuario(usuarioId: String) : Flow<List<Produto>>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun salva(vararg produto: Produto)
+    fun salva(vararg produto: Produto)
 
     @Delete
     suspend fun remove(produto: Produto)
