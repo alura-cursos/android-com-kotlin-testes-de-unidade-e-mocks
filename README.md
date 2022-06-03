@@ -17,9 +17,7 @@ Esse projeto é uma continuação do projeto do curso de [Android com Kotlin: Mi
 
 ## 📁 Acesso ao projeto
 
-Você pode acessar o código [fonte do projeto inicial](https://github.com/alura-cursos/android-com-kotlin-testes-de-unidade-e-mocks
-/tree/projeto-inicial) ou [baixá-lo](https://github.com/alura-cursos/android-com-kotlin-testes-de-unidade-e-mocks
-/archive/refs/heads/projeto-inicial.zip).
+Você pode acessar o código [fonte do projeto inicial](https://github.com/alura-cursos/android-com-kotlin-testes-de-unidade-e-mocks/tree/projeto-inicial) ou [baixá-lo](https://github.com/alura-cursos/android-com-kotlin-testes-de-unidade-e-mocks/archive/refs/heads/projeto-inicial.zip).
 
 ## 🛠️ Abrir e rodar o projeto
 
